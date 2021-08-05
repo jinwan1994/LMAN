@@ -1,5 +1,7 @@
 # Lightweight Image Super-Resolution by Multi-scale Aggregation
 
+Pytorch implementation of "Lightweight Image Super-Resolution by Multi-scale Aggregation", IEEE Transactions on Broadcasting 2021
+
 
 ![LMAN](/figs/arch.png)
 
