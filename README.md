@@ -1,5 +1,6 @@
 # Lightweight Image Super-Resolution by Multi-scale Aggregation
 
+
 ![LMAN](/figs/arch.png)
 
 The architecture of our proposed Lightweight Multi-scale Aggregation Network LMAN. The details about our proposed LMAN can be found in [our paper](https://ieeexplore.ieee.org/document/9233990).
@@ -7,7 +8,7 @@ The architecture of our proposed Lightweight Multi-scale Aggregation Network LMA
 Citation:
 
 ```latex
-@ARTICLE{9233990,
+@ARTICLE{LMAN,
   author={Wan, Jin and Yin, Hui and Liu, Zhihao and Chong, Aixin and Liu, Yanting},
   journal={IEEE Transactions on Broadcasting}, 
   title={Lightweight Image Super-Resolution by Multi-Scale Aggregation}, 
@@ -32,30 +33,30 @@ Citation:
 
     ```bash
     # BI, scale 2, 3, 4, 8
-# LMAN Small-SCALE model (x2) 
-# python main.py --model LMAN --scale 2 --n_resgroups 4 --n_feats 64 --patch_size 96 --save LMAN_base_x2 --reset 
+    # LMAN Small-SCALE model (x2) 
+    # python main.py --model LMAN --scale 2 --n_resgroups 4 --n_feats 64 --patch_size 96 --save LMAN_base_x2 --reset 
 
-# LMAN Small-SCALE model (x3) - from LMAN Small-SCALE model (x2)
-# python main.py --model LMAN --scale 3 --n_resgroups 4 --n_feats 64 --patch_size 144 --save LMAN_base_x3 --reset --pre_train ../experiment/LMAN_base_x2/model/model_best.pt
+    # LMAN Small-SCALE model (x3) - from LMAN Small-SCALE model (x2)
+    # python main.py --model LMAN --scale 3 --n_resgroups 4 --n_feats 64 --patch_size 144 --save LMAN_base_x3 --reset --pre_train ../experiment/LMAN_base_x2/model/model_best.pt
 
-# LMAN Small-SCALE model (x4) - from LMAN Small-SCALE model (x2)
-# python main.py --model LMAN --scale 4 --n_resgroups 4 --n_feats 64 --patch_size 192 --save LMAN_base_x4 --reset --pre_train ../experiment/LMAN_base_x2/model/model_best.pt
+    # LMAN Small-SCALE model (x4) - from LMAN Small-SCALE model (x2)
+    # python main.py --model LMAN --scale 4 --n_resgroups 4 --n_feats 64 --patch_size 192 --save LMAN_base_x4 --reset --pre_train ../experiment/LMAN_base_x2/model/model_best.pt
 
 
-# LMAN Small-SCALE model (x8) - from LMAN Small-SCALE model (x2)
-# python main.py --model LMAN --scale 8 --n_resgroups 4 --n_feats 64 --patch_size 384 --save LMAN_base_x8 --reset --pre_train ../experiment/LMAN_base_x2/model/model_best.pt
+    # LMAN Small-SCALE model (x8) - from LMAN Small-SCALE model (x2)
+    # python main.py --model LMAN --scale 8 --n_resgroups 4 --n_feats 64 --patch_size 384 --save LMAN_base_x8 --reset --pre_train ../experiment/LMAN_base_x2/model/model_best.pt
 
-# LMAN in the paper (x2)
-# python main.py --model LMAN --scale 2 --n_resgroups 16 --n_feats 64 --patch_size 96 --save LMAN_x2_16 --reset
+    # LMAN in the paper (x2)
+    # python main.py --model LMAN --scale 2 --n_resgroups 16 --n_feats 64 --patch_size 96 --save LMAN_x2_16 --reset
 
-# LMAN in the paper (x3) - from LMAN (x2)
-# python main.py --model LMAN --scale 3 --n_resgroups 16 --n_feats 64 --patch_size 144 --save LMAN_x3_16 --reset --pre_train ../experiment/LMAN_x2_16/model/model_best.pt
+    # LMAN in the paper (x3) - from LMAN (x2)
+    # python main.py --model LMAN --scale 3 --n_resgroups 16 --n_feats 64 --patch_size 144 --save LMAN_x3_16 --reset --pre_train ../experiment/LMAN_x2_16/model/model_best.pt
 
-# LMAN in the paper (x4) - from LMAN (x2)
-# python main.py --model LMAN --scale 4 --n_resgroups 16 --n_feats 64 --patch_size 192 --save LMAN_x4_16 --reset --pre_train ../experiment/LMAN_x2_16/model/model_best.pt
+    # LMAN in the paper (x4) - from LMAN (x2)
+    # python main.py --model LMAN --scale 4 --n_resgroups 16 --n_feats 64 --patch_size 192 --save LMAN_x4_16 --reset --pre_train ../experiment/LMAN_x2_16/model/model_best.pt
 
-# LMAN in the paper (x8) - from LMAN (x2)
-# python main.py --model LMAN --scale 8 --n_resgroups 16 --n_feats 64 --patch_size 384 --save LMAN_x8_16 --reset --pre_train ../experiment/LMAN_x2_16/model/model_best.pt
+    # LMAN in the paper (x8) - from LMAN (x2)
+    # python main.py --model LMAN --scale 8 --n_resgroups 16 --n_feats 64 --patch_size 384 --save LMAN_x8_16 --reset --pre_train ../experiment/LMAN_x2_16/model/model_best.pt
 
     ```
 
@@ -75,20 +76,20 @@ Citation:
 
     ```bash
    # Standard benchmarks (Ex. LMAN_x2)
-# python main.py --model LMAN --save test_base_x2 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 2 --n_resgroups 4 --n_feats 64 --pre_train ../experiment/model_base_x2.pt --test_only --save_results --save_gt  
-# python main.py --model LMAN --save test_x2 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 2 --n_resgroups 16 --n_feats 64 --pre_train ../experiment/model_x2.pt --test_only --save_results --save_gt  
+    # python main.py --model LMAN --save test_base_x2 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 2 --n_resgroups 4 --n_feats 64 --pre_train ../experiment/model_base_x2.pt --test_only --save_results --save_gt  
+    # python main.py --model LMAN --save test_x2 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 2 --n_resgroups 16 --n_feats 64 --pre_train ../experiment/model_x2.pt --test_only --save_results --save_gt  
 
-# Standard benchmarks (Ex. LMAN_x3)
-# python main.py --model LMAN --save test_base_x3 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 3 --n_resgroups 4 --n_feats 64 --pre_train ../experiment/model_base_x3.pt --test_only #--save_results --save_gt 
-# python main.py --model LMAN --save test_x3 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 3 --n_resgroups 16 --n_feats 64 --pre_train ../experiment/model_x3.pt --test_only #--save_results --save_gt 
+    # Standard benchmarks (Ex. LMAN_x3)
+    # python main.py --model LMAN --save test_base_x3 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 3 --n_resgroups 4 --n_feats 64 --pre_train ../experiment/model_base_x3.pt --test_only #--save_results --save_gt 
+    # python main.py --model LMAN --save test_x3 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 3 --n_resgroups 16 --n_feats 64 --pre_train ../experiment/model_x3.pt --test_only #--save_results --save_gt 
 
-# Standard benchmarks (Ex. LMAN_x4)
-# python main.py --model LMAN --save test_base_x4 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 4 --n_resgroups 4 --n_feats 64 --pre_train ../experiment/model_base_x4.pt --test_only # --save_results --save_gt
-# python main.py --model LMAN --save test_x4 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 4 --n_resgroups 16 --n_feats 64 --pre_train ../experiment/model_x4.pt --test_only # --save_results --save_gt
+    # Standard benchmarks (Ex. LMAN_x4)
+    # python main.py --model LMAN --save test_base_x4 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 4 --n_resgroups 4 --n_feats 64 --pre_train ../experiment/model_base_x4.pt --test_only # --save_results --save_gt
+    # python main.py --model LMAN --save test_x4 --data_test Set5+Set14+B100+Urban100+Manga109 --scale 4 --n_resgroups 16 --n_feats 64 --pre_train ../experiment/model_x4.pt --test_only # --save_results --save_gt
 
-# Standard benchmarks (Ex. LMAN_x8)
-# python main.py --model LMAN --save test_base_x8 --data_test Set5_x8+Set14_x8+B100_x8+Urban100_x8+Manga109_x8 --scale 8 --n_resgroups 4 --n_feats 64 --pre_train ../experiment/model_base_x8.pt  --test_only #--save_results --save_gt
-# python main.py --model LMAN --save test_x8 --data_test Set5_x8+Set14_x8+B100_x8+Urban100_x8+Manga109_x8 --scale 8 --n_resgroups 16 --n_feats 64 --pre_train ../experiment/model_x8.pt  --test_only #--save_results --save_gt
+    # Standard benchmarks (Ex. LMAN_x8)
+    # python main.py --model LMAN --save test_base_x8 --data_test Set5_x8+Set14_x8+B100_x8+Urban100_x8+Manga109_x8 --scale 8 --n_resgroups 4 --n_feats 64 --pre_train ../experiment/model_base_x8.pt  --test_only #--save_results --save_gt
+    # python main.py --model LMAN --save test_x8 --data_test Set5_x8+Set14_x8+B100_x8+Urban100_x8+Manga109_x8 --scale 8 --n_resgroups 16 --n_feats 64 --pre_train ../experiment/model_x8.pt  --test_only #--save_results --save_gt
 
     ```
 4. Finally, SR results and PSNR/SSIM values for test data are saved to `./experiment/*`. (PSNR/SSIM values in our paper are obtained using Matlab2015b)
@@ -97,13 +98,13 @@ Citation:
 
 #### Quantitative Results
 
-![benchmark](figs/Result_1.png)
+![benchmark](/figs/Result_1.png)
 
 Benchmark SISR results. Average PSNR/SSIM for scale factor x2, x3, x4,and x8 on datasets Set5,Set14, Manga109, BSD100, and Urban100.
 
 #### Visual Results
 
-![visual](figs/Result_2.png)
+![visual](/figs/Result_2.png)
 
 Visual comparison for x8 SR on  Manga109 and Urban100. dataset.
 
