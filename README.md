@@ -1,13 +1,13 @@
 # Lightweight Image Super-Resolution by Multi-scale Aggregation
 
 Pytorch implementation of "Lightweight Image Super-Resolution by Multi-scale Aggregation", IEEE Transactions on Broadcasting 2021
-
+[paper](https://ieeexplore.ieee.org/document/9233990).
 
 ## Overview
 
 ![LMAN](/figs/arch.png)
 
-The architecture of our proposed Lightweight Multi-scale Aggregation Network LMAN. The details about our proposed LMAN can be found in [our paper](https://ieeexplore.ieee.org/document/9233990).
+The architecture of our proposed Lightweight Multi-scale Aggregation Network LMAN. 
 
 Citation:
 
