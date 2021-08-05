@@ -3,6 +3,8 @@
 Pytorch implementation of "Lightweight Image Super-Resolution by Multi-scale Aggregation", IEEE Transactions on Broadcasting 2021
 
 
+
+
 ![LMAN](/figs/arch.png)
 
 The architecture of our proposed Lightweight Multi-scale Aggregation Network LMAN. The details about our proposed LMAN can be found in [our paper](https://ieeexplore.ieee.org/document/9233990).
@@ -100,13 +102,13 @@ Citation:
 
 #### Quantitative Results
 
-![benchmark](/figs/Result_1.png)
+![benchmark](/figs/result_1.png)
 
 Benchmark SISR results. Average PSNR/SSIM for scale factor x2, x3, x4,and x8 on datasets Set5,Set14, Manga109, BSD100, and Urban100.
 
 #### Visual Results
 
-![visual](/figs/Result_2.png)
+![visual](/figs/result_2.png)
 
 Visual comparison for x8 SR on  Manga109 and Urban100. dataset.
 
