@@ -1,6 +1,7 @@
 # Lightweight Image Super-Resolution by Multi-scale Aggregation
 
-Pytorch implementation of "Lightweight Image Super-Resolution by Multi-scale Aggregation", IEEE Transactions on Broadcasting 2021
+Pytorch implementation of "Lightweight Image Super-Resolution by Multi-scale Aggregation", IEEE Transactions on Broadcasting 2021.
+
 [paper](https://ieeexplore.ieee.org/document/9233990).
 
 ## Overview
@@ -110,7 +111,7 @@ Benchmark SISR results. Average PSNR/SSIM for scale factor x2, x3, x4,and x8 on 
 
 ![visual](/figs/result_2.png)
 
-Visual comparison for x8 SR on  Manga109 and Urban100. dataset.
+Visual comparison for x4 SR on Urban100. dataset.
 
 ## Acknowledgements
 
